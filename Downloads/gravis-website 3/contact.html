@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gravis</title>
+    <link rel="icon" type="image/png" href="image/logo2.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span>Gravis.inc</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html#top">TOP</a></li>
+                        <li><a href="index.html#about">ABOUT</a></li>
+                        <li><a href="index.html#services">SERVICES</a></li>
+                        <li><a href="index.html#works">WORKS</a></li>
+                        <li><a href="index.html#company">COMPANY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="index.html#company">Company</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact-form">
+        <div class="contact-wrapper">
+            <div class="contact-card">
+                <div class="container-contact">
+                    <div class="contact-content">
+                        <div class="contact-main">
+                            <div class="contact-header">
+                                <h1 class="contact-title">CONTACT</h1>
+                            </div>
+
+                            <div class="contact-description">
+                                <p>弊社では、イベント、展示会、セミナー／講演会、事務局運営など、幅広いプロジェクトに対応し、企画から運営までトータルにサポートしております。<br>
+                                イベントに関わる業務を一括でお任せいただけるため、分割発注による管理コストの削減にも効果的です。<br><br>
+                                ご相談やお見積りのご依頼など、どうぞお気軽にお問い合わせください。</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <form class="contact-form" onsubmit="return false;">
+                                        <div class="form-group name-group">
+                                            <div class="name-field">
+                                                <label for="lastname">LAST NAME <span class="required">*</span></label>
+                                                <input type="text" id="lastname" name="lastname" required placeholder="姓">
+                                            </div>
+                                            <div class="name-field">
+                                                <label for="firstname">FIRST NAME <span class="required">*</span></label>
+                                                <input type="text" id="firstname" name="firstname" required placeholder="名">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group name-group">
+                                            <div class="name-field">
+                                                <label for="lastname-kana">LAST NAME〔Kana〕 <span class="required">*</span></label>
+                                                <input type="text" id="lastname-kana" name="lastname-kana" required placeholder="セイ">
+                                            </div>
+                                            <div class="name-field">
+                                                <label for="firstname-kana">FIRST NAME〔Kana〕 <span class="required">*</span></label>
+                                                <input type="text" id="firstname-kana" name="firstname-kana" required placeholder="メイ">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="company">COMPANY NAME</label>
+                                            <input type="text" id="company" name="company" placeholder="会社名">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="email">EMAIL ADDRESS <span class="required">*</span></label>
+                                            <input type="email" id="email" name="email" required placeholder="example@company.com">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="phone">PHONE NUMBER <span class="required">*</span></label>
+                                            <input type="tel" id="phone" name="phone" required placeholder="03-1234-5678（ハイフンありでご記入ください）">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="message">MESSAGE <span class="required">*</span></label>
+                                            <textarea id="message" name="message" rows="6" required placeholder="イベントの種類、開催予定日、参加人数、ご希望の内容などを詳しくお聞かせください。お見積りやご相談などもお気軽にご連絡ください。"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-group checkbox-group">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="privacy" name="privacy" required>
+                                                <span class="checkmark"></span>
+                                                <a href="privacy.html" class="privacy-link">プライバシーポリシー</a>に同意します <span class="required">*</span>
+                                            </label>
+                                        </div>
+                                        
+                                        <button type="button" class="submit-button">
+                                            <span>確認</span>
+                                        </button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirm Modal for Contact Form -->
+    <div class="confirm-modal-overlay" id="contact-confirm-overlay" style="display:none;">
+        <div class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+            <h2 id="confirm-title">送信内容の確認</h2>
+            <div class="confirm-content">
+                <div class="confirm-row"><strong>姓</strong><span id="confirm-lastname"></span></div>
+                <div class="confirm-row"><strong>名</strong><span id="confirm-firstname"></span></div>
+                <div class="confirm-row"><strong>セイ</strong><span id="confirm-lastname-kana"></span></div>
+                <div class="confirm-row"><strong>メイ</strong><span id="confirm-firstname-kana"></span></div>
+                <div class="confirm-row"><strong>会社名</strong><span id="confirm-company"></span></div>
+                <div class="confirm-row"><strong>メール</strong><span id="confirm-email"></span></div>
+                <div class="confirm-row"><strong>電話番号</strong><span id="confirm-phone"></span></div>
+                <div class="confirm-row"><strong>メッセージ</strong><span id="confirm-message"></span></div>
+                <div class="confirm-row"><strong>プライバシー同意</strong><span id="confirm-privacy"></span></div>
+            </div>
+            <div class="confirm-actions">
+                <button type="button" class="confirm-edit" id="confirm-edit">修正する</button>
+                <button type="button" class="confirm-submit" id="confirm-submit">この内容で送信</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Section with fade-in effect -->
+    <section class="company fade-in visible" id="company-details">
+        <div class="company-wrapper">
+            <div class="company-card">
+                <div class="company-map-container">
+                    <iframe 
+                        src="https://www.google.com/maps?q=東京都千代田区外神田3-6-4+第一勧業信用組合+秋葉原ビル&output=embed&zoom=18" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="company-map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-checker-pattern"></div>
+        <div class="company-checker-pattern2"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-title-section">
+                        <div class="footer-subtitle">株式会社Gravis</div>
+                        <div class="footer-main-title">GRAVIS.INC</div>
+                    </div>
+                    <div class="footer-title-marquee">
+                        <a href="index.html#top"><h2>TOP</h2></a>
+                        <img src="image/logo2.png" alt="Footer Logo" class="footer-logo">
+                        <a href="index.html#about"><h2>ABOUT</h2></a>
+                        <img src="image/logo2.png" alt="Footer Logo" class="footer-logo">
+                        <a href="index.html#services"><h2>SERVICE</h2></a>
+                        <img src="image/logo2.png" alt="Footer Logo" class="footer-logo">
+                        <a href="index.html#works"><h2>WORKS</h2></a>
+                        <img src="image/logo2.png" alt="Footer Logo" class="footer-logo">
+                        <a href="index.html#company"><h2>COMPANY</h2></a>
+                        <img src="image/logo2.png" alt="Footer Logo" class="footer-logo">
+                        <a href="contact.html"><h2>CONTACT</h2></a>
+                    </div>
+
+                    <div class="footer-sections">
+                        <div class="footer-section contact-section">
+                            <div class="section-background"></div>
+                            <div class="section-content">
+                                <h2>CONTACT</h2>
+                            </div>
+                        </div>
+
+                        <div class="footer-section service-section">
+                            <div class="section-background"></div>
+                            <div class="section-content">
+                                <h2>SERVICE</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 GRAVIS.INC All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>
