@@ -1,0 +1,50 @@
+# Cloud Build CI/CD 設定
+# デプロイ: gcloud builds submit --config cloudbuild.yaml
+
+steps:
+  # Webhook Function デプロイ
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - 'gcloud'
+      - 'functions'
+      - 'deploy'
+      - 'line-webhook'
+      - '--gen2'
+      - '--runtime=python311'
+      - '--region=${_REGION}'
+      - '--source=.'
+      - '--entry-point=webhook'
+      - '--trigger-http'
+      - '--allow-unauthenticated'
+      - '--memory=512MB'
+      - '--timeout=60s'
+      - '--set-env-vars=GCP_PROJECT_ID=${PROJECT_ID},GITHUB_REPO=${_GITHUB_REPO}'
+      - '--set-secrets=LINE_CHANNEL_SECRET=LINE_CHANNEL_SECRET:latest,LINE_CHANNEL_ACCESS_TOKEN=LINE_CHANNEL_ACCESS_TOKEN:latest,GITHUB_TOKEN=GITHUB_TOKEN:latest,ANTHROPIC_API_KEY=ANTHROPIC_API_KEY:latest'
+    dir: 'functions/webhook'
+
+  # Scheduler Function デプロイ
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - 'gcloud'
+      - 'functions'
+      - 'deploy'
+      - 'scheduled-tasks'
+      - '--gen2'
+      - '--runtime=python311'
+      - '--region=${_REGION}'
+      - '--source=.'
+      - '--entry-point=scheduled_task'
+      - '--trigger-http'
+      - '--no-allow-unauthenticated'
+      - '--memory=1024MB'
+      - '--timeout=300s'
+      - '--set-env-vars=GCP_PROJECT_ID=${PROJECT_ID},GITHUB_REPO=${_GITHUB_REPO}'
+      - '--set-secrets=LINE_CHANNEL_SECRET=LINE_CHANNEL_SECRET:latest,LINE_CHANNEL_ACCESS_TOKEN=LINE_CHANNEL_ACCESS_TOKEN:latest,GITHUB_TOKEN=GITHUB_TOKEN:latest,ANTHROPIC_API_KEY=ANTHROPIC_API_KEY:latest'
+    dir: 'functions/scheduler'
+
+substitutions:
+  _REGION: asia-northeast1
+  _GITHUB_REPO: your-username/life-log
+
+options:
+  logging: CLOUD_LOGGING_ONLY

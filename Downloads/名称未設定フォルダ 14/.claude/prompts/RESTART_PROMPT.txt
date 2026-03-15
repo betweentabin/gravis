@@ -1,0 +1,18 @@
+===== 再起動後にコピペして実行 =====
+
+Chrome DevTools MCP（またはPlaywright MCP）を使って、Yahoo Financeから以下の市場データを取得してください：
+
+【取得対象】
+- S&P 500 (^GSPC): 2025年3月〜2026年3月の日次データ
+- VIX (^VIX): 同期間
+- WTI原油 (CL=F): 同期間
+
+【手順】
+1. まず /mcp コマンドでChrome DevTools MCPが使えるか確認
+2. Yahoo Finance (https://finance.yahoo.com/quote/^GSPC/history) にアクセス
+3. 期間を1年に設定してテーブルデータを取得
+4. `.claude/data/market/timeseries.json` の推定データを実データで更新
+
+詳細な仕様は `.claude/prompts/fetch-market-data.md` を参照。
+
+==========================================

@@ -1,0 +1,486 @@
+{
+  "_schema": "market-events-v1",
+  "_description": "市場イベント・ヘッドラインログ（2025年3月〜2026年3月）",
+  "_updated": "2026-03-15T00:00:00+09:00",
+
+  "events": [
+    {
+      "date": "2026-03-14",
+      "type": "data_release",
+      "category": "inflation",
+      "event": "PCE発表",
+      "details": {
+        "headline": "2.8%YoY",
+        "core": "2.6%YoY",
+        "market_reaction": "Fed9月利下げ1回織り込み維持"
+      },
+      "source": "websearch"
+    },
+    {
+      "date": "2026-03-13",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "イラン機雷配備示唆",
+      "details": {
+        "headline": "UK国防相がホルムズ海峡機雷配備を指摘",
+        "market_reaction": "WTI +9.7%"
+      },
+      "source": "websearch"
+    },
+    {
+      "date": "2026-03-12",
+      "type": "market_structure",
+      "category": "volatility",
+      "event": "VXカーブ状況",
+      "details": {
+        "vix_curve": "backwardation",
+        "note": "コンタンゴ回帰兆候"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-11",
+      "type": "market_structure",
+      "category": "breadth",
+      "event": "ブレッドス急落",
+      "details": {
+        "spx_above_20ema_pct": 25,
+        "interpretation": "下方向疲弊サイン"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-10",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "イラン機雷配備準備可能性",
+      "details": {
+        "headline": "ホルムズ海峡機雷配備準備",
+        "oil_impact": "長期化シナリオ"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-09",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "トランプTACO",
+      "details": {
+        "headline": "「戦争はほぼ完了」「すぐ終わる」",
+        "interpretation": "原油価格上昇への対応"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-07",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "-92K",
+        "adjusted": "-10K（ストライキ・出生死亡モデル調整後）",
+        "unemployment_rate": "4.40%",
+        "wages_mom": "0.4%",
+        "market_reaction": "一時的なブレと解釈"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-03",
+      "type": "policy",
+      "category": "energy",
+      "event": "原油高騰対策開始",
+      "details": {
+        "actions": "米中共に懸念表明",
+        "iea_release_bn_barrels": 0.4
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-02",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "革命防衛隊ホルムズ封鎖発言",
+      "details": {
+        "later_status": "米国・イラン自身が否定",
+        "significance": "革命防衛隊と政府の分裂示唆"
+      },
+      "source": "kokko_article_5"
+    },
+    {
+      "date": "2026-03-01",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "イラン軍事行動・ハメネイ師死亡",
+      "details": {
+        "tankers_stranded": 150,
+        "hormuz_status": "事実上閉鎖",
+        "oil_impact": "WTI急騰開始"
+      },
+      "source": "kokko_article_4"
+    },
+    {
+      "date": "2026-02-28",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "イラン危機開始",
+      "details": {
+        "oil_route_share_pct": 20,
+        "trigger": "米軍イラン攻撃"
+      },
+      "source": "kokko_article_4"
+    },
+    {
+      "date": "2026-02-27",
+      "type": "data_release",
+      "category": "inflation",
+      "event": "PPI発表",
+      "details": {
+        "headline_mom": "0.5%",
+        "core_mom": "0.8%",
+        "market_reaction": "インフレ懸念再燃"
+      },
+      "source": "kokko_article_4"
+    },
+    {
+      "date": "2026-02-15",
+      "type": "flow",
+      "category": "institutional",
+      "event": "脱米国フロー開始",
+      "details": {
+        "actors": ["オランダ年金基金（米国債売却）", "アムンディ（米国エクスポージャー引き下げ）"],
+        "trigger": "2025年4月関税ショックから半年"
+      },
+      "source": "kokko_article_2"
+    },
+    {
+      "date": "2026-02-07",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "130K",
+        "vs_consensus": "+60K",
+        "private_sector": "170K",
+        "manufacturing": "プラス転換（2024年以来）"
+      },
+      "source": "kokko_article_2"
+    },
+    {
+      "date": "2026-02-05",
+      "type": "data_release",
+      "category": "manufacturing",
+      "event": "ISM製造業",
+      "details": {
+        "headline": 52.5,
+        "vs_consensus": "+1.7pt",
+        "new_orders_change": "過去25年最大"
+      },
+      "source": "kokko_article_3"
+    },
+    {
+      "date": "2026-01-29",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "据え置き",
+        "guidance": "慎重姿勢継続"
+      }
+    },
+    {
+      "date": "2026-01-27",
+      "type": "tech",
+      "category": "ai",
+      "event": "DeepSeekショック",
+      "details": {
+        "headline": "中国AI DeepSeek発表",
+        "market_reaction": "テックセクター急落",
+        "ndx_change": "-3%"
+      }
+    },
+    {
+      "date": "2026-01-10",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "150K",
+        "market_reaction": "堅調維持"
+      }
+    },
+    {
+      "date": "2025-12-18",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "25bp利下げ",
+        "rate": "4.25-4.50%",
+        "dots": "2026年2回利下げ示唆"
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "180K",
+        "unemployment_rate": "4.2%"
+      }
+    },
+    {
+      "date": "2025-11-05",
+      "type": "geopolitical",
+      "category": "election",
+      "event": "米国大統領選挙",
+      "details": {
+        "result": "トランプ当選",
+        "market_reaction": "初期は不確実性でボラ上昇、その後リスクオン"
+      }
+    },
+    {
+      "date": "2025-11-07",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "25bp利下げ",
+        "rate": "4.50-4.75%"
+      }
+    },
+    {
+      "date": "2025-11-01",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "100K",
+        "note": "選挙前の慎重姿勢"
+      }
+    },
+    {
+      "date": "2025-10-18",
+      "type": "market_structure",
+      "category": "sector",
+      "event": "ソフトウェアセクターATH",
+      "details": {
+        "note": "ここからの下落が-35%に"
+      }
+    },
+    {
+      "date": "2025-10-04",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "160K"
+      }
+    },
+    {
+      "date": "2025-09-18",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "50bp利下げ",
+        "rate": "4.75-5.00%",
+        "note": "利下げサイクル開始"
+      }
+    },
+    {
+      "date": "2025-09-06",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "140K"
+      }
+    },
+    {
+      "date": "2025-08-22",
+      "type": "policy",
+      "category": "fed",
+      "event": "Jackson Hole",
+      "details": {
+        "headline": "パウエル議長講演",
+        "message": "9月利下げ示唆"
+      }
+    },
+    {
+      "date": "2025-08-05",
+      "type": "market_structure",
+      "category": "volatility",
+      "event": "夏季調整",
+      "details": {
+        "vix_spike": 32,
+        "spx_drawdown": "-5%",
+        "trigger": "流動性低下・円キャリー巻き戻し"
+      }
+    },
+    {
+      "date": "2025-08-02",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "120K",
+        "market_reaction": "景気減速懸念"
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "据え置き",
+        "rate": "5.25-5.50%",
+        "guidance": "9月利下げ可能性示唆"
+      }
+    },
+    {
+      "date": "2025-07-05",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "200K"
+      }
+    },
+    {
+      "date": "2025-06-12",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "据え置き",
+        "rate": "5.25-5.50%"
+      }
+    },
+    {
+      "date": "2025-06-06",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "180K"
+      }
+    },
+    {
+      "date": "2025-05-24",
+      "type": "policy",
+      "category": "trade",
+      "event": "関税緩和期待",
+      "details": {
+        "headline": "交渉進展の報道",
+        "market_reaction": "リスクオン回復"
+      }
+    },
+    {
+      "date": "2025-05-07",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "据え置き",
+        "rate": "5.25-5.50%"
+      }
+    },
+    {
+      "date": "2025-05-02",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "90K",
+        "note": "関税ショック影響"
+      }
+    },
+    {
+      "date": "2025-04-25",
+      "type": "policy",
+      "category": "trade",
+      "event": "関税ショック",
+      "details": {
+        "headline": "対中関税145%発表",
+        "market_reaction": "SPX -4%, VIX 35超",
+        "impact": "サプライチェーン混乱懸念"
+      }
+    },
+    {
+      "date": "2025-04-04",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "details": {
+        "headline": "210K"
+      }
+    },
+    {
+      "date": "2025-03-19",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "decision": "据え置き",
+        "rate": "5.25-5.50%",
+        "dots": "2025年3回利下げ維持"
+      }
+    },
+    {
+      "date": "2025-03-15",
+      "type": "reference",
+      "category": "baseline",
+      "event": "1年前基準日",
+      "details": {
+        "spx": 5400,
+        "ndx": 22800,
+        "vix": 14,
+        "us10y": 3.85
+      }
+    }
+  ],
+
+  "scheduled_events": [
+    {
+      "date": "2026-03-19",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "expectation": "金利据え置き、ガイダンス注目"
+    },
+    {
+      "date": "2026-04-04",
+      "type": "data_release",
+      "category": "employment",
+      "event": "NFP発表",
+      "expectation": "イラン危機影響注視"
+    }
+  ],
+
+  "event_summary": {
+    "total_fomc_meetings": 8,
+    "rate_cuts_25": 2,
+    "rate_cuts_50": 1,
+    "total_nfp_releases": 13,
+    "major_shocks": [
+      {"date": "2025-04-25", "event": "関税ショック", "vix_peak": 35},
+      {"date": "2025-08-05", "event": "夏季調整", "vix_peak": 32},
+      {"date": "2026-01-27", "event": "DeepSeekショック", "ndx_drop": "-3%"},
+      {"date": "2026-03-01", "event": "イラン危機", "vix_peak": 35, "wti_spike": "+40%"}
+    ],
+    "regime_phases": [
+      {"period": "2025-03 to 2025-04", "regime": "リスクオン", "vix_avg": 16},
+      {"period": "2025-04 to 2025-06", "regime": "関税ショック調整", "vix_avg": 28},
+      {"period": "2025-06 to 2025-08", "regime": "回復", "vix_avg": 18},
+      {"period": "2025-08", "regime": "夏季調整", "vix_avg": 28},
+      {"period": "2025-09 to 2025-10", "regime": "利下げラリー", "vix_avg": 19},
+      {"period": "2025-11", "regime": "選挙ボラ", "vix_avg": 25},
+      {"period": "2025-12 to 2026-01", "regime": "年末ラリー", "vix_avg": 15},
+      {"period": "2026-02", "regime": "DeepSeek調整", "vix_avg": 17},
+      {"period": "2026-03", "regime": "イラン危機", "vix_avg": 28}
+    ]
+  }
+}

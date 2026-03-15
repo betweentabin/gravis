@@ -1,0 +1,198 @@
+{
+  "_schema": "market-timeseries-articles-v1",
+  "_description": "kokko記事・websearchから抽出した市場データスナップショット。記事著者が言及した値・指標をそのまま保存",
+  "_updated": "2026-03-15T00:00:00+09:00",
+  "_data_sources": "kokko記事分析, websearch",
+  "_notes": {
+    "purpose": "記事著者が参照した市場データを原文のまま保存。FREDデータとは別管理",
+    "spx_discrepancy": "記事のSPX値（5600-5950）はFRED SP500系列（6600-6900）と約15%乖離。NDXはほぼ一致。原因未特定"
+  },
+
+  "snapshots": [
+    {
+      "date": "2026-03-14",
+      "source": "websearch",
+      "article_id": null,
+      "prices": {
+        "SPX": {"value": 5620.9, "change_pct": -0.5, "vs_ath_pct": -3.4},
+        "NDX": {"value": 24380, "change_pct": -0.62, "vs_ath_pct": -4.66},
+        "VIX": {"value": 27.19, "change_pct": -0.37, "range_1m": [17.5, 35.3]},
+        "WTI": {"value": 98.71, "change_pct": 9.72, "range_1m": [61.87, 119.48]},
+        "GOLD": {"value": 3019, "change_pct": -1.2, "vs_ath_pct": -10.3},
+        "DXY": {"value": 100.50, "change_pct": 0.76},
+        "US10Y": {"value": 4.29, "change_bp": 13},
+        "US2Y": {"value": 3.56, "change_bp": null}
+      },
+      "derived": {
+        "yield_curve_2s10s": 0.73,
+        "spx_vs_cta_trigger": -104.1,
+        "ndx_vs_cta_trigger": -198,
+        "vix_term_structure": "backwardation"
+      },
+      "positioning": {
+        "aggregate_percentile": 38,
+        "discretionary_percentile": 22,
+        "systematic_percentile": 63
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "source": "kokko_article_5",
+      "article_id": "2026-03-08_kokko",
+      "article_title": "今週の相場振り返りと来週の方針（関税違憲判決）",
+      "prices": {
+        "SPX": {"value": 5680, "cta_trigger": 5725},
+        "NDX": {"value": 24500, "cta_trigger": 24578},
+        "RUT": {"value": 2480, "cta_trigger": 2519},
+        "VIX": {"value": 28, "note": "潜在的爆弾"},
+        "WTI": {"value": 89, "note": "1980年代以来最大週次変動"},
+        "US10Y": {"value": 4.15}
+      },
+      "positioning": {
+        "aggregate": {"zscore": -0.04, "percentile": 38},
+        "discretionary": {"zscore": -0.41, "percentile": 22},
+        "systematic": {"zscore": 0.41, "percentile": 63},
+        "vol_control": {"percentile": 38, "prev_5w": 96}
+      },
+      "gamma": {
+        "spx_dealer_bn": -1.8,
+        "positive_flip_level": 5870
+      },
+      "breadth": {
+        "spx_above_20ema_pct": 25
+      },
+      "macro": {
+        "nfp_headline": -92000,
+        "nfp_adjusted": -10000,
+        "unemployment_rate": 4.40,
+        "wages_mom_pct": 0.4,
+        "ism_services": "予想+3pt",
+        "ism_services_new_orders": "60近く",
+        "ism_manufacturing_prices_paid": "70超え",
+        "cpi_implied_from_ism": 4.7,
+        "redbook_yoy_pct": 7,
+        "used_car_yoy_pct": 4
+      },
+      "flows": {
+        "epfr_gold_silver_aum_pct": -0.2,
+        "epfr_bank_loans_aum_pct": -0.5,
+        "epfr_em_bonds": "流入首位",
+        "epfr_ig_credit_streak_weeks": 45,
+        "mmf_total_tn": 7.816
+      },
+      "geopolitical": {
+        "iran_hormuz_status": "effectively_closed",
+        "trump_taco": "戦争ほぼ完了",
+        "iran_mines": "配備準備可能性"
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "source": "kokko_article_4",
+      "article_id": "2026-03-01_kokko",
+      "article_title": "今週の相場振り返りと来週の方針（パニックは不要）",
+      "prices": {
+        "SPX": {"value": 5820},
+        "NDX": {"value": 25100},
+        "VIX": {"value": 22},
+        "WTI": {"value": 72},
+        "US10Y": {"value": 3.95}
+      },
+      "positioning": {
+        "note": "ダウンサイド過剰ヘッジ、アップサイドアンダーウェイト"
+      },
+      "software_sector": {
+        "drawdown_from_oct_peak_pct": -35,
+        "williams_r": -100,
+        "rsi": 18
+      },
+      "cta": {
+        "ndx_trigger_pct": -1.8,
+        "ndx_trigger_level": 24132,
+        "potential_selling_bn": 100
+      },
+      "macro": {
+        "ppi_core_mom_pct": 0.8,
+        "ppi_headline_mom_pct": 0.5,
+        "lowes_hiring": "増",
+        "walmart_hiring": 9000
+      },
+      "geopolitical": {
+        "iran_action": "軍事行動開始",
+        "khamenei_death": true,
+        "tankers_stranded": 150,
+        "hormuz_oil_share_pct": 20
+      },
+      "private_credit": {
+        "liquidity_mismatch_risk": true,
+        "gate_provision_risk": true
+      },
+      "ai_narratives": {
+        "contradictions": ["ROI", "Capex", "雇用", "SaaSディスラプション"],
+        "note": "4つすべてが同時に真にはならない"
+      }
+    },
+    {
+      "date": "2026-02-14",
+      "source": "kokko_article_2",
+      "article_id": "2026-02-15_kokko",
+      "article_title": "今週の相場振り返りと来週の方針（時計仕掛けの摩天楼）",
+      "prices": {
+        "SPX": {"value": 5950},
+        "NDX": {"value": 26200},
+        "VIX": {"value": 16, "cftc_short": "historical_high"},
+        "WTI": {"value": 76},
+        "US10Y": {"value": 4.10}
+      },
+      "positioning": {
+        "dispersion_percentile": 99,
+        "note": "過去30年で9回のみの水準"
+      },
+      "macro": {
+        "nfp": {"value": 130, "unit": "K", "vs_consensus": "+60K"},
+        "private_sector_jobs": 170000,
+        "manufacturing_jobs": "2024年以来初のプラス",
+        "taiwan_exports_yoy_pct": 70,
+        "korea_ram_price_change_pct": "数百%",
+        "supercore_mom_pct": 0.595,
+        "supercore_annualized_pct": 7.1,
+        "nfib_future_sales": "上昇"
+      },
+      "gse": {
+        "portfolio_bn": 278,
+        "prev_year_bn": 181,
+        "mbs_10y_spread_bp": {"current": 89, "previous": 142}
+      },
+      "flows": {
+        "de_us_flow": ["オランダ年金基金（米国債売却）", "アムンディ（米国エクスポージャー引き下げ）"],
+        "vix_3_5m_call_flow": "45/80コール買い異常フロー"
+      }
+    },
+    {
+      "date": "2026-02-07",
+      "source": "kokko_article_3",
+      "article_id": "2026-02-08_kokko",
+      "article_title": "過剰解釈は禁物。しかし違和感は消えず",
+      "prices": {
+        "SPX": {"value": 5880},
+        "NDX": {"value": 25900},
+        "VIX": {"value": 17},
+        "WTI": {"value": 75},
+        "US10Y": {"value": 4.08}
+      },
+      "macro": {
+        "ism_manufacturing": 52.5,
+        "ism_new_orders_change": "過去25年最大",
+        "hyperscaler_capex_bn": 660
+      },
+      "positioning": {
+        "vix_short": "historical_high",
+        "note": "マージンコール連鎖仮説"
+      },
+      "policy": {
+        "qra_soma_bill": "SOMAビル購入の文言追加",
+        "note": "プチQEから本物のQEへの移行可能性"
+      }
+    }
+  ]
+}

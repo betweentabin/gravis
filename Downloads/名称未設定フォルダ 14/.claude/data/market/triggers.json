@@ -1,0 +1,275 @@
+{
+  "_schema": "market-triggers-v1",
+  "_description": "トリガー水準と監視条件（履歴データ含む）",
+  "_updated": "2026-03-15T00:00:00+09:00",
+
+  "cta_triggers": {
+    "SPX": {
+      "sell_trigger": 5725,
+      "current": 5620.9,
+      "status": "triggered",
+      "cushion_pct": -1.8,
+      "last_updated": "2026-03-14"
+    },
+    "NDX": {
+      "sell_trigger": 24578,
+      "current": 24380,
+      "status": "triggered",
+      "cushion_pct": -0.8,
+      "last_updated": "2026-03-14"
+    },
+    "RUT": {
+      "sell_trigger": 2519,
+      "current": 2450,
+      "status": "triggered",
+      "last_updated": "2026-03-14"
+    }
+  },
+
+  "gamma_levels": {
+    "SPX": {
+      "current_gamma_bn": -1.8,
+      "gamma_status": "negative",
+      "positive_flip_level": 5870,
+      "distance_to_flip_pct": 4.4,
+      "gamma_wall": 6000,
+      "last_updated": "2026-03-08"
+    }
+  },
+
+  "vix_structure": {
+    "current": 27.19,
+    "curve": "backwardation",
+    "alert_levels": {
+      "low_vol": 15,
+      "normal": 20,
+      "high_vol": 25,
+      "crisis": 35,
+      "extreme": 45
+    },
+    "current_regime": "high_vol",
+    "last_updated": "2026-03-14"
+  },
+
+  "breadth_alerts": {
+    "spx_above_20ema": {
+      "current_pct": 25,
+      "oversold_threshold": 20,
+      "extreme_threshold": 10,
+      "overbought_threshold": 80,
+      "status": "approaching_oversold",
+      "interpretation": "下方向疲弊サイン。極端圏まであと少し",
+      "last_updated": "2026-03-11"
+    }
+  },
+
+  "oil_levels": {
+    "WTI": {
+      "current": 98.71,
+      "psychological_levels": [70, 80, 100, 120],
+      "current_zone": "90-100",
+      "hormuz_status": "effectively_closed",
+      "last_updated": "2026-03-14"
+    }
+  },
+
+  "entry_conditions": {
+    "kokko_recommended": {
+      "entry_triggers": [
+        {"condition": "breadth_extreme", "threshold": "SPX 20EMA上 < 10%", "status": "not_met"},
+        {"condition": "ceasefire", "threshold": "正式停戦発表", "status": "not_met"},
+        {"condition": "vix_capitulation", "threshold": "VIX 40超え後の急低下", "status": "not_met"}
+      ],
+      "exit_triggers": [
+        {"condition": "iran_resolution", "threshold": "イラン正式終結", "status": "not_met"},
+        {"condition": "vix_contango", "threshold": "VIXコンタンゴ回帰", "status": "not_met"},
+        {"condition": "breadth_overbought", "threshold": "SPX 20EMA上 > 80%", "status": "not_met"}
+      ],
+      "stop_conditions": [
+        {"condition": "hormuz_prolonged", "threshold": "封鎖長期化（2週間超）", "status": "monitoring"},
+        {"condition": "cta_net_short", "threshold": "CTAネットショート移行", "status": "triggered"},
+        {"condition": "vix_friday_high", "threshold": "金曜引けVIX高止まり", "status": "met"}
+      ]
+    }
+  },
+
+  "trigger_history": [
+    {
+      "date": "2026-03-14",
+      "spx_cta_trigger": 5725,
+      "ndx_cta_trigger": 24578,
+      "spx_actual": 5620.9,
+      "ndx_actual": 24380,
+      "spx_status": "below_trigger",
+      "ndx_status": "below_trigger",
+      "vix": 27.19,
+      "vix_curve": "backwardation",
+      "breadth_20ema": 25,
+      "gamma_status": "negative"
+    },
+    {
+      "date": "2026-03-07",
+      "spx_cta_trigger": 5725,
+      "ndx_cta_trigger": 24578,
+      "spx_actual": 5680,
+      "ndx_actual": 24500,
+      "spx_status": "below_trigger",
+      "ndx_status": "below_trigger",
+      "vix": 28,
+      "vix_curve": "backwardation",
+      "breadth_20ema": 25,
+      "gamma_status": "negative",
+      "note": "イラン危機継続"
+    },
+    {
+      "date": "2026-02-28",
+      "spx_cta_trigger": 5800,
+      "ndx_cta_trigger": 25000,
+      "spx_actual": 5820,
+      "ndx_actual": 25100,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 22,
+      "vix_curve": "contango",
+      "note": "イラン危機直前"
+    },
+    {
+      "date": "2026-02-14",
+      "spx_cta_trigger": 5900,
+      "ndx_cta_trigger": 26000,
+      "spx_actual": 5950,
+      "ndx_actual": 26200,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 16,
+      "vix_curve": "contango",
+      "dispersion_percentile": 99,
+      "note": "ディスパージョン極端"
+    },
+    {
+      "date": "2026-01-24",
+      "spx_cta_trigger": 5900,
+      "ndx_cta_trigger": 26200,
+      "spx_actual": 5980,
+      "ndx_actual": 26500,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 14,
+      "vix_curve": "contango",
+      "note": "DeepSeek直前、低ボラ"
+    },
+    {
+      "date": "2025-11-01",
+      "spx_cta_trigger": 5400,
+      "ndx_cta_trigger": 23600,
+      "spx_actual": 5450,
+      "ndx_actual": 23800,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 28,
+      "vix_curve": "backwardation",
+      "note": "選挙前ボラ上昇"
+    },
+    {
+      "date": "2025-10-18",
+      "spx_cta_trigger": 5500,
+      "ndx_cta_trigger": 24200,
+      "spx_actual": 5580,
+      "ndx_actual": 24500,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 22,
+      "vix_curve": "contango",
+      "note": "ソフトウェアATH"
+    },
+    {
+      "date": "2025-08-09",
+      "spx_cta_trigger": 5200,
+      "ndx_cta_trigger": 22800,
+      "spx_actual": 5150,
+      "ndx_actual": 22400,
+      "spx_status": "below_trigger",
+      "ndx_status": "below_trigger",
+      "vix": 32,
+      "vix_curve": "backwardation",
+      "note": "夏季調整、CTAトリガー発動"
+    },
+    {
+      "date": "2025-07-26",
+      "spx_cta_trigger": 5250,
+      "ndx_cta_trigger": 22900,
+      "spx_actual": 5300,
+      "ndx_actual": 23000,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 22,
+      "vix_curve": "contango",
+      "note": "決算シーズン"
+    },
+    {
+      "date": "2025-05-03",
+      "spx_cta_trigger": 5100,
+      "ndx_cta_trigger": 21800,
+      "spx_actual": 5050,
+      "ndx_actual": 21500,
+      "spx_status": "below_trigger",
+      "ndx_status": "below_trigger",
+      "vix": 28,
+      "vix_curve": "backwardation",
+      "note": "関税ショック継続"
+    },
+    {
+      "date": "2025-04-26",
+      "spx_cta_trigger": 5200,
+      "ndx_cta_trigger": 22000,
+      "spx_actual": 5000,
+      "ndx_actual": 21200,
+      "spx_status": "below_trigger",
+      "ndx_status": "below_trigger",
+      "vix": 35,
+      "vix_curve": "backwardation",
+      "note": "関税ショック、CTAトリガー発動"
+    },
+    {
+      "date": "2025-04-05",
+      "spx_cta_trigger": 5250,
+      "ndx_cta_trigger": 22200,
+      "spx_actual": 5300,
+      "ndx_actual": 22400,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 18,
+      "vix_curve": "contango",
+      "note": "関税発表前、安定"
+    },
+    {
+      "date": "2025-03-15",
+      "spx_cta_trigger": 5350,
+      "ndx_cta_trigger": 22600,
+      "spx_actual": 5400,
+      "ndx_actual": 22800,
+      "spx_status": "above_trigger",
+      "ndx_status": "above_trigger",
+      "vix": 14,
+      "vix_curve": "contango",
+      "note": "1年前基準日、低ボラ環境"
+    }
+  ],
+
+  "trigger_statistics": {
+    "period": "2025-03-15 to 2026-03-14",
+    "cta_trigger_events": [
+      {"date": "2025-04-26", "trigger": "関税ショック", "duration_days": 21},
+      {"date": "2025-08-09", "trigger": "夏季調整", "duration_days": 7},
+      {"date": "2026-03-01", "trigger": "イラン危機", "duration_days": "ongoing"}
+    ],
+    "vix_backwardation_periods": [
+      {"start": "2025-04-25", "end": "2025-05-20", "duration_days": 25},
+      {"start": "2025-08-05", "end": "2025-08-15", "duration_days": 10},
+      {"start": "2025-11-01", "end": "2025-11-10", "duration_days": 9},
+      {"start": "2026-03-01", "end": "ongoing", "duration_days": "ongoing"}
+    ],
+    "gamma_negative_periods": 4,
+    "average_time_below_trigger_days": 14
+  }
+}

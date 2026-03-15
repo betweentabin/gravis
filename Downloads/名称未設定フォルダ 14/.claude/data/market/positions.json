@@ -1,0 +1,450 @@
+{
+  "_schema": "market-positions-v1",
+  "_description": "ポジショニングデータ（履歴含む、2025年3月〜2026年3月）",
+  "_updated": "2026-03-15T00:00:00+09:00",
+
+  "current_positioning": {
+    "systematic": {
+      "aggregate": {
+        "zscore": -0.04,
+        "percentile": 38,
+        "interpretation": "ニュートラルやや下",
+        "source": "DB",
+        "date": "2026-03-08"
+      },
+      "cta": {
+        "equity_percentile": 66,
+        "us_equity_percentile": 60,
+        "spx_percentile": 59,
+        "ndx_percentile": 52,
+        "rut_percentile": 62,
+        "status": "大きくフラット化",
+        "potential_buying_bn": 87,
+        "potential_selling_bn": -62,
+        "source": "BoA/DB",
+        "date": "2026-03-08"
+      },
+      "vol_control": {
+        "percentile": 38,
+        "prev_5w_percentile": 96,
+        "status": "3ヶ月超で最低",
+        "source": "DB",
+        "date": "2026-03-08"
+      },
+      "risk_parity": {
+        "equity_percentile": 65,
+        "us_equity_percentile": 75,
+        "commodity_percentile": 75,
+        "bond_percentile": 43,
+        "source": "DB",
+        "date": "2026-03-08"
+      }
+    },
+    "discretionary": {
+      "aggregate": {
+        "zscore": -0.41,
+        "percentile": 22,
+        "interpretation": "3ヶ月超で最低アンダーウェイト",
+        "source": "DB",
+        "date": "2026-03-08"
+      }
+    },
+    "flows": {
+      "epfr_ficc": {
+        "gold_silver_aum_pct": -0.2,
+        "commodity_aum_pct": 0.2,
+        "bank_loans_aum_pct": -0.5,
+        "em_bonds_aum_pct": 0.5,
+        "ig_credit_aum_pct": "positive",
+        "ig_credit_streak_weeks": 45,
+        "source": "EPFR",
+        "date": "2026-03-08"
+      },
+      "mmf": {
+        "total_tn": 7.816,
+        "status": "過去最高",
+        "institutional_tn": 4.735,
+        "source": "ICI",
+        "date": "2026-03-04"
+      }
+    },
+    "leverage_etf": {
+      "spx_lev_etf_impact": "年初来最低（6月以来低水準）",
+      "ndx_lev_etf_aum": "1月末低水準近辺",
+      "note": "恒常的ネガティブガンマ源",
+      "date": "2026-03-08"
+    },
+    "buyback": {
+      "status": "ブラックアウト明け",
+      "discretionary_pct": 30,
+      "ytd_vs_seasonal": "下回る",
+      "source": "BoA",
+      "date": "2026-03-08"
+    },
+    "cftc_cot": {
+      "vix_futures": {
+        "speculator_net": "historical_short",
+        "commercial_net": "long",
+        "note": "潜在的スクイーズリスク"
+      },
+      "crude_oil": {
+        "speculator_change": "increased",
+        "commercial_change": "selling"
+      },
+      "as_of_date": "2026-03-05"
+    }
+  },
+
+  "positioning_history": [
+    {
+      "date": "2026-03-08",
+      "aggregate_percentile": 38,
+      "discretionary_percentile": 22,
+      "systematic_percentile": 63,
+      "vol_control_percentile": 38,
+      "cta_equity_percentile": 66,
+      "vix_speculator_position": "historical_short",
+      "mmf_tn": 7.816,
+      "note": "イラン危機でデリスク進行"
+    },
+    {
+      "date": "2026-02-28",
+      "aggregate_percentile": 52,
+      "discretionary_percentile": 45,
+      "systematic_percentile": 72,
+      "vol_control_percentile": 85,
+      "cta_equity_percentile": 78,
+      "vix_speculator_position": "short",
+      "mmf_tn": 7.65,
+      "note": "イラン危機直前、比較的高ポジション"
+    },
+    {
+      "date": "2026-02-14",
+      "aggregate_percentile": 55,
+      "discretionary_percentile": 48,
+      "systematic_percentile": 75,
+      "vol_control_percentile": 92,
+      "cta_equity_percentile": 82,
+      "dispersion_percentile": 99,
+      "vix_speculator_position": "historical_short",
+      "mmf_tn": 7.50,
+      "note": "ディスパージョン99%タイル、VIXショート極端"
+    },
+    {
+      "date": "2026-01-31",
+      "aggregate_percentile": 68,
+      "discretionary_percentile": 62,
+      "systematic_percentile": 80,
+      "vol_control_percentile": 96,
+      "cta_equity_percentile": 88,
+      "vix_speculator_position": "large_short",
+      "mmf_tn": 7.40,
+      "note": "DeepSeek直前、リスクオン極端"
+    },
+    {
+      "date": "2026-01-17",
+      "aggregate_percentile": 72,
+      "discretionary_percentile": 68,
+      "systematic_percentile": 82,
+      "vol_control_percentile": 94,
+      "cta_equity_percentile": 90,
+      "vix_speculator_position": "large_short",
+      "mmf_tn": 7.30,
+      "note": "年初ラリー継続"
+    },
+    {
+      "date": "2025-12-27",
+      "aggregate_percentile": 70,
+      "discretionary_percentile": 65,
+      "systematic_percentile": 80,
+      "vol_control_percentile": 90,
+      "cta_equity_percentile": 85,
+      "vix_speculator_position": "short",
+      "mmf_tn": 7.20,
+      "note": "年末ラリー"
+    },
+    {
+      "date": "2025-12-13",
+      "aggregate_percentile": 65,
+      "discretionary_percentile": 60,
+      "systematic_percentile": 75,
+      "vol_control_percentile": 85,
+      "cta_equity_percentile": 80,
+      "vix_speculator_position": "neutral",
+      "mmf_tn": 7.10,
+      "note": "FOMC前"
+    },
+    {
+      "date": "2025-11-29",
+      "aggregate_percentile": 62,
+      "discretionary_percentile": 58,
+      "systematic_percentile": 72,
+      "vol_control_percentile": 80,
+      "cta_equity_percentile": 75,
+      "vix_speculator_position": "neutral",
+      "mmf_tn": 7.05,
+      "note": "選挙後安定"
+    },
+    {
+      "date": "2025-11-08",
+      "aggregate_percentile": 55,
+      "discretionary_percentile": 50,
+      "systematic_percentile": 68,
+      "vol_control_percentile": 70,
+      "cta_equity_percentile": 70,
+      "vix_speculator_position": "small_long",
+      "mmf_tn": 7.00,
+      "note": "選挙直後、ボラ低下開始"
+    },
+    {
+      "date": "2025-11-01",
+      "aggregate_percentile": 42,
+      "discretionary_percentile": 38,
+      "systematic_percentile": 55,
+      "vol_control_percentile": 50,
+      "cta_equity_percentile": 55,
+      "vix_speculator_position": "long",
+      "mmf_tn": 6.95,
+      "note": "選挙前不確実性ピーク"
+    },
+    {
+      "date": "2025-10-18",
+      "aggregate_percentile": 68,
+      "discretionary_percentile": 65,
+      "systematic_percentile": 78,
+      "vol_control_percentile": 82,
+      "cta_equity_percentile": 85,
+      "vix_speculator_position": "short",
+      "mmf_tn": 6.80,
+      "note": "ソフトウェアATH、リスクオン"
+    },
+    {
+      "date": "2025-10-04",
+      "aggregate_percentile": 65,
+      "discretionary_percentile": 62,
+      "systematic_percentile": 75,
+      "vol_control_percentile": 78,
+      "cta_equity_percentile": 82,
+      "vix_speculator_position": "small_short",
+      "mmf_tn": 6.75,
+      "note": "利下げラリー継続"
+    },
+    {
+      "date": "2025-09-20",
+      "aggregate_percentile": 62,
+      "discretionary_percentile": 58,
+      "systematic_percentile": 72,
+      "vol_control_percentile": 75,
+      "cta_equity_percentile": 78,
+      "vix_speculator_position": "neutral",
+      "mmf_tn": 6.70,
+      "note": "利下げ後のリバランス"
+    },
+    {
+      "date": "2025-09-06",
+      "aggregate_percentile": 55,
+      "discretionary_percentile": 52,
+      "systematic_percentile": 65,
+      "vol_control_percentile": 68,
+      "cta_equity_percentile": 70,
+      "vix_speculator_position": "small_long",
+      "mmf_tn": 6.65,
+      "note": "利下げ期待"
+    },
+    {
+      "date": "2025-08-23",
+      "aggregate_percentile": 50,
+      "discretionary_percentile": 48,
+      "systematic_percentile": 58,
+      "vol_control_percentile": 55,
+      "cta_equity_percentile": 60,
+      "vix_speculator_position": "small_long",
+      "mmf_tn": 6.60,
+      "note": "Jackson Hole前"
+    },
+    {
+      "date": "2025-08-09",
+      "aggregate_percentile": 35,
+      "discretionary_percentile": 32,
+      "systematic_percentile": 42,
+      "vol_control_percentile": 30,
+      "cta_equity_percentile": 35,
+      "vix_speculator_position": "long",
+      "mmf_tn": 6.55,
+      "note": "夏季調整、デリスク"
+    },
+    {
+      "date": "2025-07-26",
+      "aggregate_percentile": 60,
+      "discretionary_percentile": 58,
+      "systematic_percentile": 68,
+      "vol_control_percentile": 72,
+      "cta_equity_percentile": 75,
+      "vix_speculator_position": "short",
+      "mmf_tn": 6.45,
+      "note": "決算シーズン中盤"
+    },
+    {
+      "date": "2025-07-12",
+      "aggregate_percentile": 65,
+      "discretionary_percentile": 62,
+      "systematic_percentile": 72,
+      "vol_control_percentile": 78,
+      "cta_equity_percentile": 80,
+      "vix_speculator_position": "short",
+      "mmf_tn": 6.40,
+      "note": "回復継続"
+    },
+    {
+      "date": "2025-06-28",
+      "aggregate_percentile": 62,
+      "discretionary_percentile": 60,
+      "systematic_percentile": 70,
+      "vol_control_percentile": 75,
+      "cta_equity_percentile": 78,
+      "vix_speculator_position": "small_short",
+      "mmf_tn": 6.35,
+      "note": "Q2末リバランス"
+    },
+    {
+      "date": "2025-06-14",
+      "aggregate_percentile": 58,
+      "discretionary_percentile": 55,
+      "systematic_percentile": 68,
+      "vol_control_percentile": 72,
+      "cta_equity_percentile": 75,
+      "vix_speculator_position": "neutral",
+      "mmf_tn": 6.30,
+      "note": "関税緩和期待で回復"
+    },
+    {
+      "date": "2025-05-31",
+      "aggregate_percentile": 52,
+      "discretionary_percentile": 50,
+      "systematic_percentile": 62,
+      "vol_control_percentile": 65,
+      "cta_equity_percentile": 68,
+      "vix_speculator_position": "small_long",
+      "mmf_tn": 6.25,
+      "note": "関税ショックから回復開始"
+    },
+    {
+      "date": "2025-05-17",
+      "aggregate_percentile": 42,
+      "discretionary_percentile": 40,
+      "systematic_percentile": 52,
+      "vol_control_percentile": 50,
+      "cta_equity_percentile": 52,
+      "vix_speculator_position": "long",
+      "mmf_tn": 6.20,
+      "note": "関税ショック継続"
+    },
+    {
+      "date": "2025-05-03",
+      "aggregate_percentile": 32,
+      "discretionary_percentile": 30,
+      "systematic_percentile": 40,
+      "vol_control_percentile": 35,
+      "cta_equity_percentile": 38,
+      "vix_speculator_position": "large_long",
+      "mmf_tn": 6.18,
+      "note": "関税ショック深刻化"
+    },
+    {
+      "date": "2025-04-26",
+      "aggregate_percentile": 25,
+      "discretionary_percentile": 22,
+      "systematic_percentile": 32,
+      "vol_control_percentile": 25,
+      "cta_equity_percentile": 28,
+      "vix_speculator_position": "large_long",
+      "mmf_tn": 6.15,
+      "note": "関税ショック直後、極端デリスク"
+    },
+    {
+      "date": "2025-04-12",
+      "aggregate_percentile": 68,
+      "discretionary_percentile": 65,
+      "systematic_percentile": 78,
+      "vol_control_percentile": 82,
+      "cta_equity_percentile": 85,
+      "vix_speculator_position": "short",
+      "mmf_tn": 6.00,
+      "note": "関税発表前、高ポジション"
+    },
+    {
+      "date": "2025-03-29",
+      "aggregate_percentile": 72,
+      "discretionary_percentile": 70,
+      "systematic_percentile": 80,
+      "vol_control_percentile": 85,
+      "cta_equity_percentile": 88,
+      "vix_speculator_position": "large_short",
+      "mmf_tn": 5.95,
+      "note": "Q1末、リスクオン"
+    },
+    {
+      "date": "2025-03-15",
+      "aggregate_percentile": 70,
+      "discretionary_percentile": 68,
+      "systematic_percentile": 78,
+      "vol_control_percentile": 82,
+      "cta_equity_percentile": 85,
+      "vix_speculator_position": "large_short",
+      "mmf_tn": 5.90,
+      "note": "1年前基準日、高ポジション"
+    }
+  ],
+
+  "positioning_statistics": {
+    "period": "2025-03-15 to 2026-03-14",
+    "aggregate_percentile": {
+      "min": 25,
+      "max": 72,
+      "average": 54,
+      "current": 38
+    },
+    "discretionary_percentile": {
+      "min": 22,
+      "max": 70,
+      "average": 52,
+      "current": 22
+    },
+    "vol_control_percentile": {
+      "min": 25,
+      "max": 96,
+      "average": 68,
+      "current": 38
+    },
+    "cta_equity_percentile": {
+      "min": 28,
+      "max": 90,
+      "average": 70,
+      "current": 66
+    },
+    "mmf_growth": {
+      "start_tn": 5.90,
+      "end_tn": 7.816,
+      "growth_pct": 32.5
+    },
+    "extreme_events": [
+      {"date": "2025-04-26", "type": "deleveraging", "trigger": "関税ショック", "aggregate_percentile": 25},
+      {"date": "2025-08-09", "type": "deleveraging", "trigger": "夏季調整", "aggregate_percentile": 35},
+      {"date": "2026-01-31", "type": "risk_on_extreme", "trigger": "年初ラリー", "vol_control_percentile": 96},
+      {"date": "2026-02-14", "type": "dispersion_extreme", "trigger": "ディスパージョン99%タイル", "dispersion_percentile": 99},
+      {"date": "2026-03-08", "type": "deleveraging", "trigger": "イラン危機", "discretionary_percentile": 22}
+    ]
+  },
+
+  "regime_classification": [
+    {"period": "2025-03 to 2025-04-25", "regime": "risk_on", "avg_aggregate": 70},
+    {"period": "2025-04-26 to 2025-05-20", "regime": "deleveraging", "avg_aggregate": 35},
+    {"period": "2025-05-21 to 2025-08-04", "regime": "recovery", "avg_aggregate": 60},
+    {"period": "2025-08-05 to 2025-08-15", "regime": "summer_selloff", "avg_aggregate": 35},
+    {"period": "2025-08-16 to 2025-10-31", "regime": "rate_cut_rally", "avg_aggregate": 62},
+    {"period": "2025-11-01 to 2025-11-10", "regime": "election_vol", "avg_aggregate": 48},
+    {"period": "2025-11-11 to 2026-01-26", "regime": "year_end_rally", "avg_aggregate": 68},
+    {"period": "2026-01-27 to 2026-02-28", "regime": "deepseek_adjustment", "avg_aggregate": 55},
+    {"period": "2026-03-01 to present", "regime": "iran_crisis", "avg_aggregate": 38}
+  ]
+}
