@@ -1,7 +1,7 @@
 {
   "_schema": "market-timeseries-articles-v1",
   "_description": "kokko記事・websearchから抽出した市場データスナップショット。記事著者が言及した値・指標をそのまま保存",
-  "_updated": "2026-03-15T00:00:00+09:00",
+  "_updated": "2026-05-06T00:00:00+09:00",
   "_data_sources": "kokko記事分析, websearch",
   "_notes": {
     "purpose": "記事著者が参照した市場データを原文のまま保存。FREDデータとは別管理",
@@ -9,6 +9,154 @@
   },
 
   "snapshots": [
+    {
+      "date": "2026-05-03",
+      "source": "kokko_article_6",
+      "article_id": "2026-05-03_kokko",
+      "article_title": "今週の相場振り返りと来週の方針（インフレ過熱とFOMC遅延リスク）",
+      "addendum": {
+        "date": "2026-05-06",
+        "content": "QRAノーイベント。米イラン終戦合意間近（ホルムズ緩和含む）。原油売り・ドル安・金利低下・株高。PF変更なし"
+      },
+      "prices": {
+        "SPX": {"note": "4月に+10%超上昇"},
+        "VIX": {"note": "木曜日に大幅圧縮。固定ストライクIV自体が低下。低ボラレジーム回帰の可能性大"},
+        "WTI": {"note": "ホルムズ封鎖継続。追記時点で停戦合意間近報道により大幅売り"},
+        "US10Y": {"note": "年初来変動は全てインフレ期待。実質金利は不変。成長加速未織り込み"}
+      },
+      "macro": {
+        "gdp_pct": 2.0,
+        "gdp_note": "純輸出影響大（AI設備投資向け輸入）。民間国内最終需要は強い",
+        "core_durable_goods_mom_pct": 3.0,
+        "core_durable_goods_note": "2022年以来初の+3%超",
+        "personal_income_mom_pct": 0.6,
+        "private_wages_mom_pct": 0.4,
+        "personal_spending_mom_pct": 0.9,
+        "personal_spending_note": "サービス全カテゴリプラス、外食・飲酒含む",
+        "core_pce_mom_pct": 0.3,
+        "core_pce_streak": "4ヶ月連続+0.3%以上",
+        "core_services_pce_pct": 4.0,
+        "supercore_ex_housing_annualized_pct": 4.1,
+        "cyclical_services_pce_pct": 4.4,
+        "cyclical_services_pce_annualized_pct": 5.2,
+        "core_goods_pce_pct": 3.0,
+        "core_goods_note": "関税徴収鈍化・実現関税率低下の中でも3%",
+        "pce_component_volatility": "急上昇中。総合PCEボラティリティの先行指標",
+        "ism_sp_manufacturing_pmi": "いずれもかなり強い",
+        "pmi_prices": "急騰",
+        "ism_prices_paid_note": "CPI相関が懸念される水準",
+        "dallas_fed_weekly": "加速中。より高い価格を予測",
+        "bankruptcy_index": "今年急低下",
+        "korea_exports": "凄まじい上昇",
+        "ai_capex": "加速継続、ただしペースは緩やか化。価格上振れも一因",
+        "earnings_beat_rate_pct": 80,
+        "eps_yoy_pct": 31,
+        "forward_pe_note": "ガイダンス上方修正により1年前比で高すぎる水準に見えない",
+        "redbook_sales": "強い名目支出継続",
+        "boa_card_tracker": "強い"
+      },
+      "employment": {
+        "initial_claims": "1969年以来最低水準に急低下",
+        "initial_claims_note": "季節調整前も低下（季節要因ではない可能性）。NYは急減（ノイズ？）",
+        "continuing_claims": "急速に低下。長期失業者減少サイン",
+        "adp_weekly": "強い民間雇用増と明確な加速",
+        "indeed_postings": "3月低下→4月再加速",
+        "jolts_regression_forecast": 7110000
+      },
+      "housing": {
+        "starts": "急増（2ヶ月前の強い住宅ローン申請を反映）",
+        "mortgage_applications": "数週間で再び跳ね上がり。今後数ヶ月の住宅データ上向きを示唆",
+        "inventory_growth": "急速にゼロへ。住宅価格再加速の可能性"
+      },
+      "fomc": {
+        "tone": "タカ寄り（パウエル会見含む）",
+        "dissents": 4,
+        "dissent_detail": "3人は緩和バイアス声明への反対。ハマック理由公表",
+        "interpretation": "タカ的=緩和バイアスへの反対=せいぜい中立。中立は受動的緩和",
+        "cpi_fixing": "4%超示唆。年末3.5%。コア年末3.2-3.3%",
+        "ff_rate_note": "インフレ価格付け上昇にFF金利不変=受動的緩和",
+        "inflation_consumption_share_pct": 53,
+        "panic_hike_threshold_pct": 60,
+        "behind_the_curve": true,
+        "chair_transition": "次回からウォーシュに交代。コンセンサス形成が暫く困難",
+        "chemical_agricultural_prices": "急騰",
+        "panic_hike_risk": "可能性はますます高まっている。債券市場は無頓着",
+        "economic_negative_gamma": "政策変更→資産価格変動→景気への非線形増幅。舵取りを極めて困難にしている構造",
+        "williams_precedent": "昨年11月、SPX5%下落でウィリアムスが火消しに奔走"
+      },
+      "volatility": {
+        "vix_compression": "木曜日に強烈な圧縮",
+        "front_end_iv": "特に強く叩かれた。6月満期低下は比較的小さい",
+        "fixed_strike_iv": "デルタ移動影響抜きでも大幅低下。オプション自体が安くなった",
+        "interpretation": "市場が1%の値動きをストレスとして扱っていない",
+        "dealer_gamma": "ショートガンマのSpot Up Vol Up追い込みは起きていない",
+        "contango": "大きくスティープ化",
+        "vol_buyer_outlook": "非常に悪い。スポット動いてもIVついてこない",
+        "regime": "低ボラレジーム回帰の可能性が大きく増した"
+      },
+      "positioning": {
+        "spx_april_return_pct": 10,
+        "april_forced_buying_bn": 250,
+        "april_forced_buying_note": "CTA+401k。過去10年で最大級",
+        "cta": {
+          "status": "全モデルでパンパン。5月は支援的ではない",
+          "gs_outlook": "どのシナリオでも強い買い手として見ていない"
+        },
+        "may_seasonal": "株式MF/ETFから年間最大流出月。税申告後効果でパッシブ流入鈍化",
+        "vol_control": {
+          "status": "まだ積む余地あり",
+          "pace": "1m RV < 3m RVのため3m RV参照→緩やかな積み増し",
+          "low_vol_regime_impact": "背中を後押しする可能性"
+        },
+        "institutional": {
+          "net_leverage": "引き上げ（ヘッジ外し）",
+          "gross_exposure": "引き下げ（2025年夏前より激しい）",
+          "pattern": "2025年夏前類似",
+          "source": "GS via L氏"
+        },
+        "retail": "再び参加開始",
+        "retail_source": "Morgan Stanley",
+        "summary": "機械的買い圧力は消失。但し機関/個人にゆとりあり。ファンダ事故なければじり高可能"
+      },
+      "oil": {
+        "hormuz_status": "依然封鎖",
+        "normalization_timeline": "解除後も数ヶ月要する可能性",
+        "qatar_ras_laffan": "修復に数ヶ月",
+        "shipping_recovery": "荷主・保険会社の信頼回復に数週間",
+        "inflation_spillover": "2026年下期まで（ジェット燃料・肥料不足）",
+        "europe_diesel_jet": "夏から初秋に極端な逼迫（GSメインシナリオ6-7月正常化でも）",
+        "global_crude_demand_vs_feb_mbpd": -3.6,
+        "demand_weakness": "ジェット燃料と石化原料に集中",
+        "us_gasoline_demand": "堅調",
+        "inventory_drawdown": "4月前半700万bpd急速取崩し→4月後半一服",
+        "demand_destruction_signal": "一部国・地域で始まっている可能性",
+        "addendum_may6": "米イラン終戦合意間近、ホルムズ緩和含む。市場は大幅原油売り"
+      },
+      "author_action": {
+        "protection_adjustment": "プロテクション量を調整",
+        "rationale": "各資産間相関が1に近づく局面でも保険機能させる意図",
+        "hedging_approach": "シンプルにプットで保険。Overcomplicationを好まない",
+        "alternative_hedges_noted": "株プット、原油、債券、VIX、組み合わせ等、様々存在",
+        "portfolio_weight": "非米国株ウェイト大。ドル安・原油安なら恩恵大",
+        "addendum_may6_action": "動くつもりなし。プロテクション解除の理由も見えず"
+      },
+      "outlook": {
+        "base_case": "何も無ければ懸念の壁を登る。何かあれば普通に下落。通常状態",
+        "major_risks": ["イラン情勢急変", "原油在庫逼迫による急騰"],
+        "minor_risks": ["中央銀行タカ派転身（本来すべきだが遅れる見込み）"],
+        "upcoming_events": {
+          "qra": "ノーイベント（追記で確認済み）",
+          "iran_ceasefire": "間近との報道（追記）"
+        },
+        "market_structure": "あからさまな買い圧力は遠いが、じり高サポート構造は存在",
+        "risk_management_philosophy": "方向感を過度に持たず、上にも下にも対応。VIX低下でヘッジツール多様化可能"
+      },
+      "geopolitical": {
+        "iran_hormuz_status": "封鎖継続→停戦合意間近（5/6追記）",
+        "trump_policy_risk": "常に存在",
+        "iran_negotiation": "協議は踊れど遅々としか進まず（本文時点）→間近（追記時点）"
+      }
+    },
     {
       "date": "2026-03-14",
       "source": "websearch",

@@ -1,28 +1,23 @@
 {
   "_schema": "market-triggers-v1",
   "_description": "トリガー水準と監視条件（履歴データ含む）",
-  "_updated": "2026-03-15T00:00:00+09:00",
+  "_updated": "2026-05-06T00:00:00+09:00",
 
   "cta_triggers": {
     "SPX": {
-      "sell_trigger": 5725,
-      "current": 5620.9,
-      "status": "triggered",
-      "cushion_pct": -1.8,
-      "last_updated": "2026-03-14"
+      "status": "maxed_out",
+      "note": "全モデルでパンパン。GSはどのシナリオでも強い買い手として見ていない",
+      "last_updated": "2026-05-03"
     },
     "NDX": {
-      "sell_trigger": 24578,
-      "current": 24380,
-      "status": "triggered",
-      "cushion_pct": -0.8,
-      "last_updated": "2026-03-14"
+      "status": "maxed_out",
+      "note": "同上",
+      "last_updated": "2026-05-03"
     },
     "RUT": {
-      "sell_trigger": 2519,
-      "current": 2450,
-      "status": "triggered",
-      "last_updated": "2026-03-14"
+      "status": "maxed_out",
+      "note": "同上",
+      "last_updated": "2026-05-03"
     }
   },
 
@@ -38,8 +33,9 @@
   },
 
   "vix_structure": {
-    "current": 27.19,
-    "curve": "backwardation",
+    "note": "木曜日に強烈圧縮。固定ストライクIV自体が低下",
+    "curve": "contango",
+    "contango_note": "大きくスティープ化",
     "alert_levels": {
       "low_vol": 15,
       "normal": 20,
@@ -47,8 +43,9 @@
       "crisis": 35,
       "extreme": 45
     },
-    "current_regime": "high_vol",
-    "last_updated": "2026-03-14"
+    "current_regime": "low_vol_return",
+    "regime_note": "低ボラレジーム回帰の可能性が大きく増した",
+    "last_updated": "2026-05-03"
   },
 
   "breadth_alerts": {
@@ -65,35 +62,41 @@
 
   "oil_levels": {
     "WTI": {
-      "current": 98.71,
+      "note": "停戦合意間近報道で大幅売り（5/6追記）",
       "psychological_levels": [70, 80, 100, 120],
-      "current_zone": "90-100",
-      "hormuz_status": "effectively_closed",
-      "last_updated": "2026-03-14"
+      "hormuz_status": "封鎖継続→停戦合意間近（5/6）",
+      "normalization": "解除後も数ヶ月要する可能性（インフラ再建・海運回復・信頼回復）",
+      "europe_fuel_stress": "夏から初秋に極端な逼迫（GSメインシナリオ6-7月正常化でも）",
+      "demand_destruction": "一部国・地域で始まっている可能性",
+      "last_updated": "2026-05-06"
     }
   },
 
   "entry_conditions": {
-    "kokko_recommended": {
-      "entry_triggers": [
-        {"condition": "breadth_extreme", "threshold": "SPX 20EMA上 < 10%", "status": "not_met"},
-        {"condition": "ceasefire", "threshold": "正式停戦発表", "status": "not_met"},
-        {"condition": "vix_capitulation", "threshold": "VIX 40超え後の急低下", "status": "not_met"}
+    "kokko_current_stance": {
+      "description": "方向感を過度に持たず、上にも下にも対応できるリスク管理",
+      "hedging": "シンプルにプットで保険。非米国株ウェイト大",
+      "monitoring": [
+        {"item": "原油価格の趨勢", "status": "停戦合意間近で一旦緩和方向"},
+        {"item": "中央銀行動向", "status": "パニック利上げリスク上昇中。ウォーシュ新議長の動向注視"},
+        {"item": "インフレ消費比率", "current_pct": 53, "panic_threshold_pct": 60}
       ],
-      "exit_triggers": [
-        {"condition": "iran_resolution", "threshold": "イラン正式終結", "status": "not_met"},
-        {"condition": "vix_contango", "threshold": "VIXコンタンゴ回帰", "status": "not_met"},
-        {"condition": "breadth_overbought", "threshold": "SPX 20EMA上 > 80%", "status": "not_met"}
-      ],
-      "stop_conditions": [
-        {"condition": "hormuz_prolonged", "threshold": "封鎖長期化（2週間超）", "status": "monitoring"},
-        {"condition": "cta_net_short", "threshold": "CTAネットショート移行", "status": "triggered"},
-        {"condition": "vix_friday_high", "threshold": "金曜引けVIX高止まり", "status": "met"}
-      ]
+      "risk_scenarios": {
+        "major": ["イラン情勢急変", "原油在庫逼迫による急騰"],
+        "minor": ["中央銀行タカ派転身（遅れる見込み）"]
+      },
+      "status_may6": "特に何も動くつもりなし"
     }
   },
 
   "trigger_history": [
+    {
+      "date": "2026-05-03",
+      "cta_status": "maxed_out_all_models",
+      "vix_curve": "contango",
+      "vix_regime": "low_vol_return",
+      "note": "CTA$250bn強制買い完了後。低ボラレジーム回帰。固定ストライクIV低下"
+    },
     {
       "date": "2026-03-14",
       "spx_cta_trigger": 5725,
@@ -261,13 +264,13 @@
     "cta_trigger_events": [
       {"date": "2025-04-26", "trigger": "関税ショック", "duration_days": 21},
       {"date": "2025-08-09", "trigger": "夏季調整", "duration_days": 7},
-      {"date": "2026-03-01", "trigger": "イラン危機", "duration_days": "ongoing"}
+      {"date": "2026-03-01", "trigger": "イラン危機", "duration_days": 60, "end": "2026-04-30"}
     ],
     "vix_backwardation_periods": [
       {"start": "2025-04-25", "end": "2025-05-20", "duration_days": 25},
       {"start": "2025-08-05", "end": "2025-08-15", "duration_days": 10},
       {"start": "2025-11-01", "end": "2025-11-10", "duration_days": 9},
-      {"start": "2026-03-01", "end": "ongoing", "duration_days": "ongoing"}
+      {"start": "2026-03-01", "end": "2026-04-30", "duration_days": 60, "note": "5月初にコンタンゴ回帰"}
     ],
     "gamma_negative_periods": 4,
     "average_time_below_trigger_days": 14

@@ -1,9 +1,132 @@
 {
   "_schema": "market-events-v1",
   "_description": "市場イベント・ヘッドラインログ（2025年3月〜2026年3月）",
-  "_updated": "2026-03-15T00:00:00+09:00",
+  "_updated": "2026-05-06T00:00:00+09:00",
 
   "events": [
+    {
+      "date": "2026-05-06",
+      "type": "policy",
+      "category": "treasury",
+      "event": "QRA発表",
+      "details": {
+        "headline": "文言・クーポンサイズ共に変化なし",
+        "market_reaction": "ノーイベント"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-05-06",
+      "type": "geopolitical",
+      "category": "iran_conflict",
+      "event": "米イラン終戦合意間近報道",
+      "details": {
+        "headline": "終戦合意が間近、ホルムズ状況緩和含む",
+        "market_reaction": "原油売り・ドル安・金利低下・株高"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-05-01",
+      "type": "market_structure",
+      "category": "volatility",
+      "event": "VIX強烈圧縮",
+      "details": {
+        "headline": "木曜日にVIX大幅低下。固定ストライクIV自体が低下",
+        "interpretation": "低ボラレジーム回帰の可能性大。フロントエンド特に叩かれた",
+        "contango": "大きくスティープ化"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-05-01",
+      "type": "policy",
+      "category": "fed",
+      "event": "FOMC決定",
+      "details": {
+        "tone": "タカ寄り（パウエル会見含む）",
+        "dissents": 4,
+        "dissent_detail": "3人は緩和バイアス声明への反対",
+        "interpretation": "タカ的だがせいぜい中立=受動的緩和。パニック利上げリスク上昇",
+        "inflation_consumption_share_pct": 53,
+        "chair_transition": "次回からウォーシュに交代"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-30",
+      "type": "data_release",
+      "category": "inflation",
+      "event": "コアPCE発表",
+      "details": {
+        "core_pce_mom_pct": 0.3,
+        "streak": "4ヶ月連続+0.3%以上",
+        "core_services_pct": 4.0,
+        "supercore_annualized_pct": 4.1,
+        "cyclical_services_annualized_pct": 5.2,
+        "core_goods_pct": 3.0
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-30",
+      "type": "data_release",
+      "category": "consumption",
+      "event": "個人所得・消費発表",
+      "details": {
+        "personal_income_mom_pct": 0.6,
+        "private_wages_mom_pct": 0.4,
+        "personal_spending_mom_pct": 0.9,
+        "note": "サービス全カテゴリプラス（外食・飲酒含む）"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-30",
+      "type": "data_release",
+      "category": "gdp",
+      "event": "GDP発表",
+      "details": {
+        "headline_pct": 2.0,
+        "note": "やや弱いが純輸出影響。民間国内最終需要は強い"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-28",
+      "type": "data_release",
+      "category": "manufacturing",
+      "event": "コア耐久財受注",
+      "details": {
+        "mom_pct": 3.0,
+        "note": "2022年以来初の+3%超"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-24",
+      "type": "data_release",
+      "category": "employment",
+      "event": "新規失業保険申請件数",
+      "details": {
+        "headline": "1969年以来最低水準",
+        "note": "季節調整前も低下。継続受給件数も急速低下",
+        "ny_caveat": "NY州急減にノイズの可能性"
+      },
+      "source": "kokko_article_6"
+    },
+    {
+      "date": "2026-04-15",
+      "type": "market_structure",
+      "category": "flows",
+      "event": "4月CTA/401kフロー",
+      "details": {
+        "forced_buying_bn": 250,
+        "note": "過去10年で最大級。SPX +10%超の背景",
+        "may_outlook": "CTAパンパン、税金流出アゲンスト"
+      },
+      "source": "kokko_article_6"
+    },
     {
       "date": "2026-03-14",
       "type": "data_release",
@@ -445,18 +568,11 @@
 
   "scheduled_events": [
     {
-      "date": "2026-03-19",
+      "date": "2026-06-11",
       "type": "policy",
       "category": "fed",
-      "event": "FOMC決定",
-      "expectation": "金利据え置き、ガイダンス注目"
-    },
-    {
-      "date": "2026-04-04",
-      "type": "data_release",
-      "category": "employment",
-      "event": "NFP発表",
-      "expectation": "イラン危機影響注視"
+      "event": "FOMC決定（ウォーシュ新議長初回）",
+      "expectation": "新議長下でのコンセンサス形成に注目。引き締め方向の動きがあるか"
     }
   ],
 
@@ -480,7 +596,9 @@
       {"period": "2025-11", "regime": "選挙ボラ", "vix_avg": 25},
       {"period": "2025-12 to 2026-01", "regime": "年末ラリー", "vix_avg": 15},
       {"period": "2026-02", "regime": "DeepSeek調整", "vix_avg": 17},
-      {"period": "2026-03", "regime": "イラン危機", "vix_avg": 28}
+      {"period": "2026-03", "regime": "イラン危機", "vix_avg": 28},
+      {"period": "2026-04", "regime": "イラン停戦スクイーズ+CTA強制買い", "note": "SPX+10%超、$250bn強制買い"},
+      {"period": "2026-05", "regime": "低ボラレジーム回帰?", "note": "VIX圧縮、懸念の壁を登る状態"}
     ]
   }
 }

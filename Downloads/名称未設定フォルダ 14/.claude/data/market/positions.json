@@ -1,101 +1,67 @@
 {
   "_schema": "market-positions-v1",
   "_description": "ポジショニングデータ（履歴含む、2025年3月〜2026年3月）",
-  "_updated": "2026-03-15T00:00:00+09:00",
+  "_updated": "2026-05-06T00:00:00+09:00",
 
   "current_positioning": {
     "systematic": {
-      "aggregate": {
-        "zscore": -0.04,
-        "percentile": 38,
-        "interpretation": "ニュートラルやや下",
-        "source": "DB",
-        "date": "2026-03-08"
-      },
       "cta": {
-        "equity_percentile": 66,
-        "us_equity_percentile": 60,
-        "spx_percentile": 59,
-        "ndx_percentile": 52,
-        "rut_percentile": 62,
-        "status": "大きくフラット化",
-        "potential_buying_bn": 87,
-        "potential_selling_bn": -62,
-        "source": "BoA/DB",
-        "date": "2026-03-08"
+        "status": "全モデルでパンパン（maxed out）",
+        "april_buying_bn": 250,
+        "april_buying_note": "CTA+401k合計。過去10年で最大級",
+        "may_outlook": "支援的ではない。GSはどのシナリオでも強い買い手と見ていない",
+        "source": "GS/Tier1Alpha",
+        "date": "2026-05-03"
       },
       "vol_control": {
-        "percentile": 38,
-        "prev_5w_percentile": 96,
-        "status": "3ヶ月超で最低",
-        "source": "DB",
-        "date": "2026-03-08"
-      },
-      "risk_parity": {
-        "equity_percentile": 65,
-        "us_equity_percentile": 75,
-        "commodity_percentile": 75,
-        "bond_percentile": 43,
-        "source": "DB",
-        "date": "2026-03-08"
+        "status": "まだ積む余地あり",
+        "reference_shift": "1m RV < 3m RVのため3m RV参照へ移行",
+        "pace": "緩やかな積み増し",
+        "low_vol_regime_impact": "背中を後押しする可能性",
+        "source": "Tier1Alpha",
+        "date": "2026-05-03"
       }
     },
     "discretionary": {
-      "aggregate": {
-        "zscore": -0.41,
-        "percentile": 22,
-        "interpretation": "3ヶ月超で最低アンダーウェイト",
-        "source": "DB",
-        "date": "2026-03-08"
+      "institutional": {
+        "net_leverage": "引き上げ（ヘッジ外し）",
+        "gross_exposure": "引き下げ（2025年夏前より激しい）",
+        "pattern": "2025年夏前類似の行動様式",
+        "source": "GS via L氏",
+        "date": "2026-05-03"
+      },
+      "retail": {
+        "status": "再び参加し始めている",
+        "source": "Morgan Stanley",
+        "date": "2026-05-03"
       }
     },
     "flows": {
-      "epfr_ficc": {
-        "gold_silver_aum_pct": -0.2,
-        "commodity_aum_pct": 0.2,
-        "bank_loans_aum_pct": -0.5,
-        "em_bonds_aum_pct": 0.5,
-        "ig_credit_aum_pct": "positive",
-        "ig_credit_streak_weeks": 45,
-        "source": "EPFR",
-        "date": "2026-03-08"
-      },
-      "mmf": {
-        "total_tn": 7.816,
-        "status": "過去最高",
-        "institutional_tn": 4.735,
-        "source": "ICI",
-        "date": "2026-03-04"
+      "may_seasonal": {
+        "note": "株式MF/ETFから年間最大流出月",
+        "tax_effect": "税還付原資の買い鈍化。パッシブ流入鈍化見通し",
+        "source": "GS",
+        "date": "2026-05-03"
       }
     },
-    "leverage_etf": {
-      "spx_lev_etf_impact": "年初来最低（6月以来低水準）",
-      "ndx_lev_etf_aum": "1月末低水準近辺",
-      "note": "恒常的ネガティブガンマ源",
-      "date": "2026-03-08"
-    },
-    "buyback": {
-      "status": "ブラックアウト明け",
-      "discretionary_pct": 30,
-      "ytd_vs_seasonal": "下回る",
-      "source": "BoA",
-      "date": "2026-03-08"
-    },
-    "cftc_cot": {
-      "vix_futures": {
-        "speculator_net": "historical_short",
-        "commercial_net": "long",
-        "note": "潜在的スクイーズリスク"
-      },
-      "crude_oil": {
-        "speculator_change": "increased",
-        "commercial_change": "selling"
-      },
-      "as_of_date": "2026-03-05"
+    "summary": {
+      "mechanical_buying": "5月は期待できない（CTA飽和+季節性アゲンスト）",
+      "fundamental_buying": "機関投資家/個人投資家にゆとり。ボラコンのジリジリ買い",
+      "outlook": "ファンダ事故なければじり高可能。懸念の壁を登る用意あり",
+      "date": "2026-05-03"
     }
   },
 
   "positioning_history": [
+    {
+      "date": "2026-05-03",
+      "cta_status": "maxed_out",
+      "vol_control_status": "room_to_add_slowly",
+      "institutional_net_leverage": "up",
+      "institutional_gross_exposure": "down_aggressively",
+      "retail_status": "re_entering",
+      "note": "4月$250bn強制買い完了。5月はCTA/季節性アゲンスト。機関/個人/ボラコンにじり高余地"
+    },
     {
       "date": "2026-03-08",
       "aggregate_percentile": 38,
@@ -445,6 +411,8 @@
     {"period": "2025-11-01 to 2025-11-10", "regime": "election_vol", "avg_aggregate": 48},
     {"period": "2025-11-11 to 2026-01-26", "regime": "year_end_rally", "avg_aggregate": 68},
     {"period": "2026-01-27 to 2026-02-28", "regime": "deepseek_adjustment", "avg_aggregate": 55},
-    {"period": "2026-03-01 to present", "regime": "iran_crisis", "avg_aggregate": 38}
+    {"period": "2026-03-01 to 2026-03-31", "regime": "iran_crisis", "avg_aggregate": 38},
+    {"period": "2026-04", "regime": "ceasefire_squeeze", "note": "SPX+10%超、CTA+401k $250bn強制買い"},
+    {"period": "2026-05 to present", "regime": "low_vol_return", "note": "CTA飽和、じり高可能。インフレ過熱+FOMC遅延リスク"}
   ]
 }
